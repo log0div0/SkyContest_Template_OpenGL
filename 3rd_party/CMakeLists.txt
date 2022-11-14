@@ -7,10 +7,10 @@ set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 add_subdirectory(efsw-1.3.0)
 add_subdirectory(glfw-3.3.6)
 
-add_library(glad glad/glad.c)
+add_library(glad STATIC  glad/glad.c)
 target_include_directories(glad PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
-add_library(imgui
+add_library(imgui STATIC
 	imgui-1.87/imgui.cpp
 	imgui-1.87/imgui_draw.cpp
 	imgui-1.87/imgui_tables.cpp
